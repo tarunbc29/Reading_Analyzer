@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/view_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.3"
+            android:background="@drawable/bg_button"
+            android:padding="5dp"
+            android:text="View"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/choose_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.3"
+            android:background="@drawable/bg_button"
+            android:padding="5dp"
+            android:text="Choose"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.3"
+            android:background="@drawable/bg_button"
+            android:padding="5dp"
+            android:text="Generate QR Code"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/page_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.1"
+            android:text="0"
+            android:textColor="#c0392b" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/edit_layouts"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_layout"
+        android:layout_margin="5dp" >
+
+        <EditText
+            android:id="@+id/et_subject_area"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@android:drawable/editbox_background"
+            android:hint="subject area"
+            android:inputType="text"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/et_article"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@android:drawable/editbox_background"
+            android:hint="types of article"
+            android:inputType="text"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textSize="13sp" />
+    </LinearLayout>
+  <LinearLayout
+        android:id="@+id/edit_layouts1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_layouts"
+        android:layout_margin="5dp" >
+    <EditText
+        android:id="@+id/et_book_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_layouts"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="0.5"
+        android:background="@android:drawable/editbox_background"
+        android:hint="book name"
+        android:inputType="text"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        android:textSize="13sp" />
+     <EditText
+        android:id="@+id/et_reader_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:layout_below="@id/edit_layouts"
+        android:layout_marginLeft="5dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="reader name"
+        android:inputType="text"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        android:textSize="13sp" />
+    </LinearLayout>
+
+    <com.joanzapata.pdfview.PDFView
+        android:id="@+id/pdfView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/edit_layouts1" />
+
+</RelativeLayout>
